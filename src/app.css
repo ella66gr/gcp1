@@ -1,3 +1,16 @@
-@import 'tailwindcss';
-@plugin '@tailwindcss/forms';
-@plugin '@tailwindcss/typography';
+/* src/app.css */
+
+/* Import Tailwind CSS v4 */
+@import "tailwindcss";
+
+/* Add Flowbite plugin and sources */
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite-svelte/dist";
+
+/* Official Flowbite Svelte dark mode support */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Base styles */
+html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
