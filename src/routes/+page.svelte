@@ -11,8 +11,8 @@
 </script>
 
 <svelte:head>
-  <title>SvelteKit + Tailwind CSS v4 + Flowbite Svelte</title>
-  <meta name="description" content="Modern SvelteKit setup with Tailwind CSS v4 and Flowbite Svelte components" />
+  <title>GenderSense Marketing Tools</title>
+  <meta name="description" content="GenderSense marketing system control panel" />
 </svelte:head>
 
 <!-- Main container with proper responsive padding -->
@@ -22,10 +22,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="text-center">
         <h1 class="text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mb-4">
-          SvelteKit + Tailwind CSS v4 + Flowbite Svelte
+          News & Content
         </h1>
         <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-          A modern web development stack with production-ready components, responsive design, and professional layouts
+          Tools and applications for GSL marketing content management
         </p>
 
         <!-- Theme Toggle -->

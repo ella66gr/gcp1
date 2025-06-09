@@ -1,7 +1,7 @@
 <!-- src/lib/components/Navigation.svelte -->
 
 <script>
-  import { page } from '$app/stores';
+  import { page } from '$app/state'; // Updated import for Svelte 5
   import { DarkMode } from 'flowbite-svelte';
 
   // Manual mobile menu state
@@ -21,7 +21,7 @@
     <!-- Brand -->
     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse" on:click={closeMobileMenu}>
       <span class="self-center text-2xl font-semibold whitespace-nowrap text-gray-900 dark:text-white">
-        SvelteKit Demo
+        GenderSense
       </span>
     </a>
 
@@ -52,30 +52,30 @@
           <a
             href="/"
             on:click={closeMobileMenu}
-            class="block py-2 px-3 rounded {$page.url.pathname === '/' ? 'text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}"
-            aria-current={$page.url.pathname === '/' ? 'page' : undefined}
+            class="block py-2 px-3 rounded {page.url.pathname === '/' ? 'text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}"
+            aria-current={page.url.pathname === '/' ? 'page' : undefined}
           >
             Home
           </a>
         </li>
         <li>
           <a
-            href="/components"
+            href="/unstyled"
             on:click={closeMobileMenu}
-            class="block py-2 px-3 rounded {$page.url.pathname === '/components' ? 'text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}"
-            aria-current={$page.url.pathname === '/components' ? 'page' : undefined}
+            class="block py-2 px-3 rounded {page.url.pathname === '/components' ? 'text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}"
+            aria-current={page.url.pathname === '/components' ? 'page' : undefined}
           >
-            Components
+            Unstyled
           </a>
         </li>
         <li>
           <a
-            href="/themes"
+            href="/styled"
             on:click={closeMobileMenu}
-            class="block py-2 px-3 rounded {$page.url.pathname === '/themes' ? 'text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}"
-            aria-current={$page.url.pathname === '/themes' ? 'page' : undefined}
+            class="block py-2 px-3 rounded {page.url.pathname === '/themes' ? 'text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}"
+            aria-current={page.url.pathname === '/themes' ? 'page' : undefined}
           >
-            Themes
+            Styled
           </a>
         </li>
       </ul>
